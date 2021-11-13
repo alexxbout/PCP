@@ -1,42 +1,85 @@
-window.addEventListener("load", loaded);
+window.addEventListener("load", init);
 
 let chart = null;
 
-function loaded() {
+function init() {
     loadCharts();
     loadHomepage();
     hackAmCharts();
+    loadAnimations();
 
-    // const threshold = 100;
-    // let scrolled = false;
-    // let elementTarget = document.getElementById("skills");
-
-    // let skillCardsAnime = anime({
-    //     targets: ".skillCard",
-    //     opacity: [0, 1],
-    //     scale: [0.5, 1],
-    //     translateY: [
-    //         { value: "-200px", duration: 1 },
-    //         { value: "0px" }
-    //     ],
-    //     delay: anime.stagger(150),
-    //     autoplay: false,
-    //     easing: "easeInOutQuad"
-    // });
-
-    // window.addEventListener("scroll", function() {
-    //     if (window.scrollY > (elementTarget.offsetTop - threshold) && !scrolled) {
-    //         scrolled = true;
-    //         skillCardsAnime.play();
-    //         chart.appear();
-    //     }
-    // });
 
     /* Prevent image drag */
     let images = document.images;
 
     for (let i = 0; i < images.length; i++)
         images[i].setAttribute("draggable", false);
+}
+
+function loadAnimations() {
+    const threshold = 350;
+    let scrolled = false;
+    let elementTarget = document.getElementById("skills");
+
+    anime({
+        targets: ".skillCard",
+        scale: 0.4,
+        duration: 1
+    });
+
+    let skillCardsAnime = anime({
+        targets: ".skillCard",
+        opacity: [0, 1],
+        scale: [0.4, 1],
+        duration: 1300,
+        delay: anime.stagger(200),
+        autoplay: false,
+        easing: "easeInOutQuart"
+    });
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > (elementTarget.offsetTop - threshold) && !scrolled) {
+            scrolled = true;
+            skillCardsAnime.play();
+            chart.appear();
+        }
+    });
+}
+
+function animeDots() {
+    anime({
+        targets: ".dot",
+        easing: "easeInOutQuad",
+        duration: 3000,
+        translateX: "-50%",
+        translateY: "-50%",
+        left: function() {
+            let leftVals = [40, 60];
+            if (window.screen.width < 640) {
+                leftVals[0] = 50;
+                leftVals[1] = 100;
+            }
+            return anime.random(leftVals[0], leftVals[1]) + "vw";
+        },
+        top: function() {
+            let topVals = [10, 60];
+            if (window.screen.width < 640) {
+                topVals[0] = 50;
+                topVals[1] = 100;
+            }
+            return anime.random(topVals[0], topVals[1]) + "vh";
+        },
+        scale: function() {
+            let scaleVals = [95, 160];
+            if (window.screen.width < 640) {
+                scaleVals[0] = 200;
+                scaleVals[1] = 300;
+            }
+            return anime.random(scaleVals[0], scaleVals[1]) / 100;
+        },
+        delay: anime.stagger(300),
+        complete: animeDots
+    });
 }
 
 function loadHomepage() {
@@ -55,23 +98,24 @@ function loadHomepage() {
         easing: "easeInOutQuart",
     });
 
-    anime({
+    let animeDot = anime({
         targets: ".dot",
         easing: "easeInOutSine",
         duration: 2000,
         opacity: [0, 0.8],
-        scale: [0.4, 1],
+        scale: [0.4, 1.2],
         translateX: "-50%",
         translateY: "-50%",
         left: function() {
-            return anime.random(25, 75) + "vw";
+            return anime.random(35, 65) + "vw";
         },
         top: function() {
-            return anime.random(0, 50) + "vh";
+            return anime.random(10, 60) + "vh";
         },
-        delay: anime.stagger(500)
+        delay: anime.stagger(300)
     });
 
+    animeDot.finished.then(animeDots());
 }
 
 function hackAmCharts() {

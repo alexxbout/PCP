@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    @font-face {
+        font-family: "AdobeCleanBlack";
+        src: url("../fonts/adobe/AdobeCleanBlack.woff") format("woff");
+    }
+    @font-face {
+        font-family: "AdobeCleanBold";
+        src: url("../fonts/adobe/AdobeCleanBold.woff") format("woff");
+    }
+    @font-face {
+        font-family: "AdobeCleanExtraBold";
+        src: url("../fonts/adobe/AdobeCleanExtraBold.woff") format("woff");
+    }
+    @font-face {
+        font-family: "AdobeCleanLight";
+        src: url("../fonts/adobe/AdobeCleanLight.woff") format("woff");
+    }
+    @font-face {
+        font-family: "AdobeCleanRegular";
+        src: url("../fonts/adobe/AdobeCleanRegular.woff") format("woff");
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

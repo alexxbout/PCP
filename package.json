@@ -4,7 +4,7 @@
     "description": "",
     "main": "postcss.config.js",
     "scripts": {
-        "build": "postcss css/tailwind.css -o public/build/styles.css"
+        "build": "postcss input.css -o public/css/styles.css"
     },
     "author": "",
     "license": "ISC",
