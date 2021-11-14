@@ -7,13 +7,6 @@ function init() {
     loadHomepage();
     hackAmCharts();
     loadAnimations();
-
-
-    /* Prevent image drag */
-    let images = document.images;
-
-    for (let i = 0; i < images.length; i++)
-        images[i].setAttribute("draggable", false);
 }
 
 function loadAnimations() {
@@ -54,7 +47,7 @@ function animeDots() {
         translateX: "-50%",
         translateY: "-50%",
         left: function() {
-            let leftVals = [40, 60];
+            let leftVals = [35, 65];
             if (window.screen.width < 640) {
                 leftVals[0] = 50;
                 leftVals[1] = 100;
