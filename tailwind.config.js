@@ -11,6 +11,9 @@ module.exports = {
     darkMode: "class", // or "media" or "class"
     theme: {
         extend: {
+            minHeight: {
+                14: "3.5rem"
+            },
             transitionProperty: {},
             fontFamily: {
                 cleanBlack: ["AdobeCleanBlack"],
@@ -28,8 +31,8 @@ module.exports = {
                 sun: "#ff5200"
             },
             boxShadow: {
-                around: "rgba(0, 0, 0, 0.08) 0px 4px 12px",
-                aroundXl: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;",
+                around: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+                // aroundXl: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
                 aroundSun: "0px 10px 100px -35px #ff5200"
             },
             keyframes: {},
