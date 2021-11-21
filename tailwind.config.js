@@ -31,7 +31,7 @@ module.exports = {
                 sun: "#ff5200"
             },
             boxShadow: {
-                around: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+                around: "rgba(0, 0, 0, 0.2) 0px 18px 50px -10px",
                 aroundSun: "0px 10px 100px -35px #ff5200"
             },
             keyframes: {},

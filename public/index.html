@@ -78,7 +78,7 @@
             </div>
 
             <div class="grid h-full lg:grid-cols-2 place-items-center">
-                <div class="flex items-center justify-center text-xl md:text-4xl font-cleanLight">
+                <div class="flex items-center justify-center text-xl md:text-3xl font-cleanLight">
                     <span>Un étudiant passionné par les nouvelles technologies, qui est prêt à mettre ses compétences à disposition pour de formidables projets !<br><br>Selon moi, un bon développeur est quelqu’un qui a le sens du <span class="font-cleanRegular text-sun">détail</span>,
                     de la <span class="font-cleanRegular text-sun">perfection</span> et qui aime se mettre au service du
                     <span class="font-cleanRegular text-sun">produit</span>, de son
@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="flex items-center justify-center">
-                    <div class="h-full max-w-xs md:max-w-md bg-sun shadow-aroundSun rounded-2xl">
+                    <div class="h-full max-w-xs bg-transparent shadow-none md:max-w-md md:bg-sun md:shadow-aroundSun rounded-2xl">
                         <div class="relative grid w-full h-full grid-cols-2 overflow-hidden duration-500 ease-in-out transform scale-105 bg-white md:scale-100 p-14 gap-x-28 md:translate-x-10 md:translate-y-10 place-items-center bg-opacity-70 backdrop-filter backdrop-blur-xl rounded-2xl shadow-around hover:scale-105">
                             <div class="flex items-center justify-center w-full h-full">
                                 <img class="absolute w-56" src="./img/bitmoji.png" alt="">
@@ -124,8 +124,8 @@
                 <span>Des compétences à votre service.</span>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-x-5 xl:gap-x-10 gap-y-10 md:pb-0">
-                <div class="opacity-0 skillCard h-96 lg:h-full w-80 rounded-2xl shadow-around" id="chartdiv"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 xl:gap-x-20 gap-y-10 md:pb-0">
+                <div class="opacity-0 skillCard h-96 sm:h-full lg:h-full w-80 rounded-2xl shadow-around" id="chartdiv"></div>
 
                 <div class="flex flex-col h-full opacity-0 w-80 skillCard shadow-around rounded-2xl">
                     <div class="flex flex-col items-center justify-center h-32 p-5 text-sun gap-y-2 rounded-t-3xl">
@@ -216,7 +216,7 @@
                 <span>Mes formations.</span>
             </div>
 
-            <div class="grid h-full lg:grid-cols-3 place-items-center gap-x-20 gap-y-10">
+            <div class="grid h-full sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-20 gap-y-10">
 
                 <div class="flex flex-col items-center justify-center p-4 text-center bg-white bg-opacity-30 gap-y-5 shadow-around rounded-2xl w-80">
                     <div class="w-full h-full py-10 text-3xl bg-white gap-x-2 px-14 rounded-xl font-cleanExtraBold">
@@ -244,12 +244,12 @@
                         <span>OKMONT</span>
                         <span>Melesse</span>
                     </div>
-                    <a href="" class="flex items-center justify-center w-full h-16 text-lg text-white duration-500 transform bg-sun gap-x-1 rounded-2xl font-cleanExtraBold hover:scale-95">
+                    <div class="flex items-center justify-center w-full h-16 text-lg text-white bg-gray-300 cursor-not-allowed gap-x-1 rounded-2xl font-cleanExtraBold">
                         <span>Continuer</span>
                         <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                         </svg>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-4 text-center bg-white bg-opacity-30 gap-y-5 shadow-around rounded-2xl w-80">
@@ -260,23 +260,46 @@
                         <span>OpenClassRooms</span>
                         <span>Pix</span>
                     </div>
-                    <a href="" class="flex items-center justify-center w-full h-16 text-lg text-white duration-500 transform bg-sun gap-x-1 rounded-2xl font-cleanExtraBold hover:scale-95">
+                    <div class="flex items-center justify-center w-full h-16 text-lg text-white bg-gray-300 cursor-not-allowed gap-x-1 rounded-2xl font-cleanExtraBold">
                         <span>Continuer</span>
                         <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                         </svg>
-                    </a>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <!-- <div class="py-14"></div> -->
+    <div class="py-14"></div>
 
     <!-- Contacts -->
-    <!-- <div id="contacts" class="h-screen">
-    </div> -->
+    <div id="contacts" class="h-screen px-5 py-5 md:py-10 lg:px-20" style="background: url(./img/wave.svg) no-repeat bottom; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+        <div class="grid place-items-center gap-y-20">
+            <div class="text-3xl text-center transition-all duration-500 md:text-6xl font-cleanBold">
+                <span>Collaborons ensemble !</span>
+            </div>
+
+            <div class="flex flex-col p-10 mt-32 bg-white shadow-around rounded-2xl gap-y-5">
+                <div class="text-3xl font-cleanBold">
+                    <span>Coordonnées</span>
+                </div>
+
+                <div class="flex gap-x-2">
+                    <span class="font-cleanBold">Adresse Email :</span>
+                    <span>boutinaud.pro[at]gmail.com</span>
+                </div>
+
+                <div>
+                    <a class="font-cleanBold" href="https://fr.linkedin.com/in/alexandre-boutinaud-264302196">Linkedin</a>
+                </div>
+
+                <div>
+                    <a class="font-cleanBold" href="https://github.com/alexxbout">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
