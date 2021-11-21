@@ -2,6 +2,9 @@ window.addEventListener("load", init);
 
 let chart = null;
 
+/**
+ * Init app function
+ */
 function init() {
     loadCharts();
     loadHomepage();
@@ -9,6 +12,9 @@ function init() {
     loadAnimations();
 }
 
+/**
+ * Load animations
+ */
 function loadAnimations() {
     const threshold = 350;
     let scrolled = false;
@@ -39,6 +45,9 @@ function loadAnimations() {
     });
 }
 
+/**
+ * Load homepage dots animation
+ */
 function animeDots() {
     anime({
         targets: ".dot",
@@ -47,34 +56,27 @@ function animeDots() {
         translateX: "-50%",
         translateY: "-50%",
         left: function() {
-            let leftVals = [35, 65];
-            if (window.screen.width < 640) {
-                leftVals[0] = 50;
-                leftVals[1] = 100;
-            }
-            return anime.random(leftVals[0], leftVals[1]) + "vw";
+            return anime.random(35, 75) + "vw";
         },
         top: function() {
-            let topVals = [10, 60];
-            if (window.screen.width < 640) {
-                topVals[0] = 50;
-                topVals[1] = 100;
-            }
-            return anime.random(topVals[0], topVals[1]) + "vh";
+            return anime.random(50, 80) + "vh";
         },
         scale: function() {
-            let scaleVals = [95, 160];
-            if (window.screen.width < 640) {
-                scaleVals[0] = 200;
-                scaleVals[1] = 300;
-            }
-            return anime.random(scaleVals[0], scaleVals[1]) / 100;
+            var generateNumber = function(min, max) {
+                var range = max - min;
+                return min + range * Math.random();
+            };
+
+            return generateNumber(1, 1.4);
         },
-        delay: anime.stagger(300),
+        delay: anime.stagger(500),
         complete: animeDots
     });
 }
 
+/**
+ * Load homepage
+ */
 function loadHomepage() {
     anime({
         targets: ".helloScreen",
@@ -94,29 +96,35 @@ function loadHomepage() {
     let animeDot = anime({
         targets: ".dot",
         easing: "easeInOutSine",
-        duration: 2000,
+        duration: 1300,
         opacity: [0, 0.8],
-        scale: [0.4, 1.2],
+        scale: [0.4, 1.3],
         translateX: "-50%",
         translateY: "-50%",
         left: function() {
-            return anime.random(35, 65) + "vw";
+            return anime.random(40, 70) + "vw";
         },
         top: function() {
-            return anime.random(10, 60) + "vh";
+            return anime.random(50, 80) + "vh";
         },
-        delay: anime.stagger(300)
+        delay: anime.stagger(700)
     });
 
     animeDot.finished.then(animeDots());
 }
 
+/**
+ * Remove amCharts watermark
+ */
 function hackAmCharts() {
     document.querySelectorAll("[aria-labelledby^='id-'][aria-labelledby$='-title']").forEach((item) => {
         item.classList.add("hidden");
     });
 }
 
+/**
+ * Load skill chart
+ */
 function loadCharts() {
     am4core.ready(function() {
         am4core.useTheme(am4themes_animated);

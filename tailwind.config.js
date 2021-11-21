@@ -32,7 +32,6 @@ module.exports = {
             },
             boxShadow: {
                 around: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                // aroundXl: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
                 aroundSun: "0px 10px 100px -35px #ff5200"
             },
             keyframes: {},
