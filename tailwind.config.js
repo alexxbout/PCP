@@ -2,8 +2,8 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
     purge: {
-        enabled: false,
-        content: ["./public/*.html"],
+        enabled: true,
+        content: ["./*.html"],
         options: {
             safelist: ["dark"],
         }
@@ -23,12 +23,10 @@ module.exports = {
                 cleanRegular: ["AdobeCleanRegular"]
             },
             colors: {
-                orange: colors.orange,
-                amber: colors.amber,
-                darkgray: "#1c1c1c",
+                customGray: "#1c1c1c",
                 lightgray: "#fbfbfb",
-                mediumgray: "#1F1F1F",
-                sun: "#ff5200"
+                lightSun: "#FFB363",
+                darkOrange: "#FA8D13"
             },
             boxShadow: {
                 around: "rgba(0, 0, 0, 0.2) 0px 18px 50px -10px",

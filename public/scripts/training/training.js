@@ -95,33 +95,35 @@ function toggleData(dataUniqueId) {
         duration: 1000
     });
 
-    anime({
-        targets: document.getElementById(dataUniqueId).querySelectorAll(".title"),
-        fontSize: function() {
-            let val = window.screen.width < 640 ? "20px" : "22px";
+    if (window.screen.width >= 640) {
+        anime({
+            targets: document.getElementById(dataUniqueId).querySelectorAll(".title"),
+            fontSize: function() {
+                let val = "22px";
 
-            if (content.classList.contains("hidden"))
-                val = "16px";
+                if (content.classList.contains("hidden"))
+                    val = "16px";
 
-            return val;
-        },
-        duration: 400,
-        easing: "easeOutBack"
-    });
+                return val;
+            },
+            duration: 400,
+            easing: "easeOutBack"
+        });
 
-    anime({
-        targets: document.getElementById(dataUniqueId).querySelectorAll(".folder"),
-        scale: function() {
-            let val = window.screen.width < 640 ? 1.2 : 1.3;
+        anime({
+            targets: document.getElementById(dataUniqueId).querySelectorAll(".folder"),
+            scale: function() {
+                let val = 1.3;
 
-            if (content.classList.contains("hidden"))
-                val = 1;
+                if (content.classList.contains("hidden"))
+                    val = 1;
 
-            return val;
-        },
-        duration: 400,
-        easing: "easeOutBack"
-    });
+                return val;
+            },
+            duration: 400,
+            easing: "easeOutBack"
+        });
+    }
 
     data.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
 }

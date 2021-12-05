@@ -203,7 +203,7 @@ function build(sectionId, titre, contexte, missions, competences, productions) {
 
                         <div class="flex items-center justify-center font-cleanBold gap-x-2 m-5">
                             <div class="h-full w-max relative flex items-center justify-start mr-7">
-                                <svg class="w-6 h-6 absolute text-sun folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <svg class="w-6 h-6 absolute text-darkOrange folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
                                 </svg>
                             </div>
@@ -230,7 +230,7 @@ function build(sectionId, titre, contexte, missions, competences, productions) {
 
     html += `</ul></div>`;
     if (productions != null)
-        html += `<a class="p-2 text-center text-white duration-500 ease-in-out transform rounded-xl shadow-aroundSun bg-sun font-cleanBold w-max hover:scale-95" target="_blank" href="${productions}">Productions</a></div></div>`;
+        html += `<a class="p-2 text-center text-white duration-500 ease-in-out transform rounded-xl shadow-aroundSun bg-darkOrange font-cleanBold w-max hover:scale-95" target="_blank" href="${productions}">Productions</a></div></div>`;
     else
         html += `<div class="p-2 text-center text-white duration-500 rounded-xl shadow-around bg-gray-300 font-cleanBold w-max cursor-not-allowed">Productions</div></div></div>`;
 

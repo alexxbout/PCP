@@ -46,35 +46,6 @@ function loadAnimations() {
 }
 
 /**
- * Load homepage dots animation
- */
-function animeDots() {
-    anime({
-        targets: ".dot",
-        easing: "easeInOutQuad",
-        duration: 3000,
-        translateX: "-50%",
-        translateY: "-50%",
-        left: function() {
-            return anime.random(35, 75) + "vw";
-        },
-        top: function() {
-            return anime.random(50, 80) + "vh";
-        },
-        scale: function() {
-            var generateNumber = function(min, max) {
-                var range = max - min;
-                return min + range * Math.random();
-            };
-
-            return generateNumber(1, 1.4);
-        },
-        delay: anime.stagger(500),
-        complete: animeDots
-    });
-}
-
-/**
  * Load homepage
  */
 function loadHomepage() {
@@ -93,24 +64,60 @@ function loadHomepage() {
         easing: "easeInOutQuart",
     });
 
-    let animeDot = anime({
+    let maxWidth;
+
+    if (window.innerWidth < 640) {
+        maxWidth = 3;
+    } else if (window.innerWidth >= 640 && window.innerWidth < 1024) {
+        maxWidth = 1.8;
+    } else if (window.innerWidth >= 1024 && window.innerWidth < 1536) {
+        maxWidth = 1.3;
+    } else if (window.innerWidth >= 1536) {
+        maxWidth = 2;
+    }
+
+    anime({
         targets: ".dot",
-        easing: "easeInOutSine",
+        easing: "easeInOutQuad",
         duration: 1300,
-        opacity: [0, 0.8],
-        scale: [0.4, 1.3],
-        translateX: "-50%",
-        translateY: "-50%",
-        left: function() {
-            return anime.random(40, 70) + "vw";
+        opacity: [0, 1],
+        scale: [0.8, maxWidth],
+
+        translateY: function() {
+            let negative = false;
+
+            if (anime.random(0, 100) > 50)
+                negative = true;
+
+            let val = anime.random(5, 20);
+
+            return (negative ? val * -1 : val) + "%";
+        },
+
+        translateX: function() {
+            // return anime.random(30, 80) + "vw";
+            let negative = false;
+
+            if (anime.random(0, 100) > 50)
+                negative = true;
+
+            let val = anime.random(10, 30);
+
+            return (negative ? val * -1 : val) + "%";
         },
         top: function() {
-            return anime.random(50, 80) + "vh";
+            // return anime.random(50, 80) + "vh";
         },
-        delay: anime.stagger(700)
-    });
+        rotate: function() {
+            var generateNumber = function(min, max) {
+                var range = max - min;
+                return min + range * Math.random();
+            };
 
-    animeDot.finished.then(animeDots());
+            return generateNumber(30, 120) + "deg";
+        },
+        delay: anime.stagger(200)
+    });
 }
 
 /**
