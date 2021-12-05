@@ -16,7 +16,7 @@ function init() {
  * Load animations
  */
 function loadAnimations() {
-    const threshold = 350;
+    const threshold = 500;
     let scrolled = false;
     let elementTarget = document.getElementById("skills");
 
@@ -49,6 +49,9 @@ function loadAnimations() {
  * Load homepage
  */
 function loadHomepage() {
+
+    console.log(window.innerWidth);
+
     anime({
         targets: ".helloScreen",
         opacity: 1,
@@ -68,20 +71,18 @@ function loadHomepage() {
 
     if (window.innerWidth < 640) {
         maxWidth = 3;
-    } else if (window.innerWidth >= 640 && window.innerWidth < 1024) {
-        maxWidth = 1.8;
-    } else if (window.innerWidth >= 1024 && window.innerWidth < 1536) {
-        maxWidth = 1.3;
-    } else if (window.innerWidth >= 1536) {
+    } else if (window.innerWidth >= 640 && window.innerWidth <= 1536) {
+        maxWidth = 1.4;
+    } else if (window.innerWidth > 1536) {
         maxWidth = 2;
     }
 
     anime({
         targets: ".dot",
         easing: "easeInOutQuad",
-        duration: 1300,
+        duration: 1700,
         opacity: [0, 1],
-        scale: [0.8, maxWidth],
+        scale: [0.5, maxWidth],
 
         translateY: function() {
             let negative = false;
@@ -105,16 +106,13 @@ function loadHomepage() {
 
             return (negative ? val * -1 : val) + "%";
         },
-        top: function() {
-            // return anime.random(50, 80) + "vh";
-        },
         rotate: function() {
             var generateNumber = function(min, max) {
                 var range = max - min;
                 return min + range * Math.random();
             };
 
-            return generateNumber(30, 120) + "deg";
+            return generateNumber(50, 180) + "deg";
         },
         delay: anime.stagger(200)
     });
@@ -146,15 +144,15 @@ function loadCharts() {
             "value": 50,
             "full": 100
         }, {
-            "category": "C#",
-            "value": 50,
-            "full": 100
-        }, {
             "category": "JavaScript",
-            "value": 55,
+            "value": 60,
             "full": 100
         }, {
             "category": "HTML/CSS/PHP",
+            "value": 60,
+            "full": 100
+        }, {
+            "category": "C#",
             "value": 60,
             "full": 100
         }, {
@@ -209,6 +207,6 @@ function loadCharts() {
         //     return chart.colors.getIndex(target.dataItem.index);
         // });
 
-        series2.columns.template.fill = am4core.color("#ff5200");
+        series2.columns.template.fill = am4core.color("#FF661F");
     });
 }
