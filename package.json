@@ -1,16 +1,15 @@
 {
-    "name": "alexandre",
+    "name": "pcp",
     "version": "1.0.0",
     "description": "",
-    "main": "postcss.config.js",
+    "main": "tailwind.config.js",
     "scripts": {
-        "build": "postcss input.css -o public/css/styles.css"
+        "dev": "npx tailwindcss -i ./input.css -o ./public/css/styles.css --watch"
     },
+    "keywords": [],
     "author": "",
     "license": "ISC",
-    "dependencies": {
-        "autoprefixer": "^10.4.0",
-        "postcss-cli": "^9.0.1",
-        "tailwindcss": "^2.2.17"
+    "devDependencies": {
+        "tailwindcss": "^3.0.1"
     }
 }

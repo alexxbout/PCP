@@ -19,7 +19,7 @@ function init() {
     // Generate random identifiers for each data
     for (let i = 0; i < sectionsBtn.length; i++) {
         let currentId = sectionsBtn[i].id;
-        // Id without Button Button or Section after : ap b1 b2 or b3
+        // Id without Button Button or Section after : ap b1 or b2
         let slicedId = currentId.slice(0, 2);
 
         sectionsIds.push(slicedId);
@@ -94,38 +94,6 @@ function toggleData(dataUniqueId) {
         },
         duration: 1000
     });
-
-    if (window.screen.width >= 640) {
-        anime({
-            targets: document.getElementById(dataUniqueId).querySelectorAll(".title"),
-            fontSize: function() {
-                let val = "22px";
-
-                if (content.classList.contains("hidden"))
-                    val = "16px";
-
-                return val;
-            },
-            duration: 400,
-            easing: "easeOutBack"
-        });
-
-        anime({
-            targets: document.getElementById(dataUniqueId).querySelectorAll(".folder"),
-            scale: function() {
-                let val = 1.3;
-
-                if (content.classList.contains("hidden"))
-                    val = 1;
-
-                return val;
-            },
-            duration: 400,
-            easing: "easeOutBack"
-        });
-    }
-
-    data.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
 }
 
 /**
@@ -170,7 +138,7 @@ function toggleSections(sectionId) {
 /**
  * Return an array of oepend data
  * @param {string} sectionId 
- * @returns array of opened data for specific section. Ex : ap, b1, b2, b3
+ * @returns array of opened data for specific section. Ex : ap, b1, b2
  */
 function getOpenedData(sectionId) {
     let openedUniqueId = [];

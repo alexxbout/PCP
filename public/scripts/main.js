@@ -72,16 +72,16 @@ function loadHomepage() {
     if (window.innerWidth < 640) {
         maxWidth = 3;
     } else if (window.innerWidth >= 640 && window.innerWidth <= 1536) {
-        maxWidth = 1.4;
+        maxWidth = 1.2;
     } else if (window.innerWidth > 1536) {
-        maxWidth = 2;
+        maxWidth = 1.7;
     }
 
     anime({
         targets: ".dot",
         easing: "easeInOutQuad",
         duration: 1700,
-        opacity: [0, 1],
+        opacity: [0, 0.9],
         scale: [0.5, maxWidth],
 
         translateY: function() {
@@ -96,7 +96,6 @@ function loadHomepage() {
         },
 
         translateX: function() {
-            // return anime.random(30, 80) + "vw";
             let negative = false;
 
             if (anime.random(0, 100) > 50)
