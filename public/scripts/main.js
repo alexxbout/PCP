@@ -7,9 +7,38 @@ let chart = null;
  */
 function init() {
     loadCharts();
-    loadHomepage();
     hackAmCharts();
     loadAnimations();
+
+    let training_scroll = document.getElementById("training_scroll");
+
+    training_scroll.classList.toggle("scroll-smooth");
+    training_scroll.classList.toggle("snap-x");
+
+    training_scroll.scrollLeft = 9999;
+
+    // Position nav bar to middle of the screen
+    let scrollWidth = training_scroll.scrollWidth;
+    let navSize = training_scroll.scrollWidth - training_scroll.scrollLeft;
+    let middle = (scrollWidth - navSize) / 2;
+    let temp = scrollWidth - middle;
+    let toScroll = temp - navSize;
+
+    training_scroll.scrollLeft = toScroll;
+
+    training_scroll.classList.toggle("scroll-smooth");
+    training_scroll.classList.toggle("snap-x");
+
+    let right_scroll = document.getElementById("right_scroll");
+    let left_scroll = document.getElementById("left_scroll");
+
+    right_scroll.addEventListener("click", () => {
+        training_scroll.scrollLeft = training_scroll.scrollWidth;
+    });
+
+    left_scroll.addEventListener("click", () => {
+        training_scroll.scrollLeft = 0;
+    });
 }
 
 /**
@@ -42,78 +71,6 @@ function loadAnimations() {
             skillCardsAnime.play();
             chart.appear();
         }
-    });
-}
-
-/**
- * Load homepage
- */
-function loadHomepage() {
-
-    console.log(window.innerWidth);
-
-    anime({
-        targets: ".helloScreen",
-        opacity: 1,
-        translateX: ["-30px", "0px"],
-        duration: 2000,
-        easing: "easeInOutQuart",
-    });
-
-    anime({
-        targets: [".arrow", ".header"],
-        opacity: 1,
-        duration: 2000,
-        easing: "easeInOutQuart",
-    });
-
-    let maxWidth;
-
-    if (window.innerWidth < 640) {
-        maxWidth = 3;
-    } else if (window.innerWidth >= 640 && window.innerWidth <= 1536) {
-        maxWidth = 1.2;
-    } else if (window.innerWidth > 1536) {
-        maxWidth = 1.7;
-    }
-
-    anime({
-        targets: ".dot",
-        easing: "easeInOutQuad",
-        duration: 1700,
-        opacity: [0, 0.9],
-        scale: [0.5, maxWidth],
-
-        translateY: function() {
-            let negative = false;
-
-            if (anime.random(0, 100) > 50)
-                negative = true;
-
-            let val = anime.random(5, 20);
-
-            return (negative ? val * -1 : val) + "%";
-        },
-
-        translateX: function() {
-            let negative = false;
-
-            if (anime.random(0, 100) > 50)
-                negative = true;
-
-            let val = anime.random(10, 30);
-
-            return (negative ? val * -1 : val) + "%";
-        },
-        rotate: function() {
-            var generateNumber = function(min, max) {
-                var range = max - min;
-                return min + range * Math.random();
-            };
-
-            return generateNumber(50, 180) + "deg";
-        },
-        delay: anime.stagger(200)
     });
 }
 
@@ -206,6 +163,6 @@ function loadCharts() {
         //     return chart.colors.getIndex(target.dataItem.index);
         // });
 
-        series2.columns.template.fill = am4core.color("#FF661F");
+        series2.columns.template.fill = am4core.color("#000000");
     });
 }

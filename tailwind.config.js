@@ -13,9 +13,9 @@ module.exports = {
                 cleanRegular: ["AdobeCleanRegular"]
             },
             colors: {
-                customGray: "#1c1c1c",
-                lightgray: "#fbfbfb",
-                global: "#FF5200"
+                darkgray: "#121217",
+                lightgray: "#F9F9F9",
+                // global: "#FF5200"
             },
             boxShadow: {
                 around: "rgba(0, 0, 0, 0.2) 0px 18px 50px -10px",

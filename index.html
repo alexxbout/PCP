@@ -11,110 +11,91 @@
     <link rel="icon" href="./public/img/portfolio.png">
 </head>
 
-<body class="overflow-x-hidden overflow-y-visible select-none text-customGray font-cleanLight">
+<body class="flex flex-col overflow-x-hidden overflow-y-visible select-none text-customGray font-cleanLight scroll-smooth gap-y-20">
     <!-- Homepage -->
-    <div id="homepage" class="h-screen overflow-hidden">
-        <div class="relative flex flex-col items-center justify-center h-full">
+    <section id="homepage" class="h-screen px-20 py-10">
+        <header class="flex items-center justify-center w-full pt-5 text-white">
+            <ul class="font-cleanBold flex p-4 px-6 items-center justify-center rounded-full w-max gap-x-20 bg-darkgray shadow-[0_0_80px_5px_rgba(255,255,255,0.25)]">
+                <li class="flex items-center justify-center gap-x-2">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Qui suis-je ?</span>
+                </li>
+                <li class="flex items-center justify-center gap-x-2">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Compétences</span>
+                </li>
+                <li class="flex items-center justify-center gap-x-2">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                    </svg>
+                    <span>Formations</span>
+                </li>
+                <!-- <li class="flex items-center justify-center gap-x-2">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    <span>Contacts</span>
+                </li> -->
+            </ul>
+        </header>
 
-            <img class="absolute opacity-0 dot" src="./public/img/dot1.png" alt="">
-            <img class="absolute opacity-0 dot" src="./public/img/dot2.png" alt="">
-            <img class="absolute opacity-0 dot" src="./public/img/dot3.png" alt="">
+        <div class="grid w-full h-full place-items-center">
+            <div class="flex flex-col text-8xl">
+                <span class="font-cleanBold">Bonjour ! Je m'appelle Alexandre.</span>
+                <div class="w-full my-5 border-b-2 border-darkgray"></div>
 
-            <header class="z-50 flex items-center justify-center w-screen mt-10 text-lg text-center gap-x-8 text-md font-cleanRegular header">
-                <a href="#experiences">
-                    <span class="text-sm md:text-base">Qui suis-je</span>
-                </a>
-
-                <a href="#skills">
-                    <span class="text-sm md:text-base">Compétences</span>
-                </a>
-
-                <a href="#training">
-                    <span class="text-sm md:text-base">Formations</span>
-                </a>
-
-                <a href="#contacts">
-                    <span class="text-sm md:text-base">Contacts</span>
-                </a>
-            </header>
-
-            <div class="flex flex-col justify-center h-full px-5 text-lg opacity-0 lg:px-20 font-cleanRegular md:text-2xl helloScreen">
-                <div class="flex flex-wrap mb-5 text-3xl md:text-5xl lg:text-7xl font-cleanExtraBold">
-                    <span>Bonjour !&#160;</span>
-                    <span>Je m'appelle Alexandre.</span>
-                </div>
-                <span>Je suis étudiant en informatique et développeur full-stack.</span>
-                <span>J'aime créer des choses simples et intuitives.</span>
-
-                <div class="border-b-2 border-customGray mt-14"></div>
+                <span class="text-5xl text-opacity-40">Je suis étudiant en informatique et développeur full-stack.</span>
+                <span class="text-5xl text-opacity-40">J'aime créer des choses simples et intuitives.</span>
             </div>
-
-            <a href="#experiences">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-12 mb-5 opacity-0 animate-bounce arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </a>
+            <!-- <div>
+                <img src="./public/img/bitmoji.png" alt="">
+            </div> -->
         </div>
-    </div>
 
-    <div class="py-14"></div>
+    </section>
 
     <!-- Qui suis-je ? -->
-    <div id="experiences" class="h-screen px-5 py-5 md:py-10 lg:px-20">
-        <div class="flex flex-col items-center justify-center h-full">
-            <div class="text-3xl text-center transition-all duration-500 md:text-6xl font-cleanBold">
-                <span>À propos.</span>
+    <section id="experiences" class="h-screen px-5 py-5 md:py-10 md:px-20">
+        <div class="flex flex-col items-center justify-center h-screen md:flex-row gap-x-20 gap-y-10">
+            <div class="flex flex-col rounded-[45px] bg-darkgray place-items-center shadow-[0_0_100px_20px_#00000026] order-last md:order-first">
+                <img class="w-56" src="./public/img/pc.png" alt="">
+                <div class="flex flex-col justify-center py-7 px-16 m-7 text-2xl gap-y-7 bg-lightgray rounded-[30px] font-cleanBold">
+                    <a href="https://fr.linkedin.com/in/alexandre-boutinaud-264302196" class="flex h-full gap-x-5 w-max">
+                        <img class="w-10" src="./public/img/linkedin.svg" alt="">
+                        <span>Linkedin</span>
+                    </a>
+                    <a href="https://github.com/alexxbout" class="flex h-full gap-x-5 w-max">
+                        <img class="w-10" src="./public/img/github.svg" alt="">
+                        <span>Github</span>
+                    </a>
+                </div>
             </div>
-
-            <div class="grid h-full lg:grid-cols-2 place-items-center">
-                <div class="flex items-center justify-center text-xl md:text-3xl font-cleanLight">
-                    <span>Un étudiant passionné par les nouvelles technologies, qui est prêt à mettre ses compétences à disposition pour de formidables projets !<br><br>Selon moi, un bon développeur est quelqu’un qui a le sens du <span class="font-cleanRegular text-global">détail</span>,
-                    de la <span class="font-cleanRegular text-global">perfection</span> et qui aime se mettre au service du
-                    <span class="font-cleanRegular text-global">produit</span>, de son
-                    <span class="font-cleanRegular text-global">équipe</span> et des <span class="font-cleanRegular text-global">utilisateurs </span><img class="inline-block ml-2 w-7" src="./public/img/thumbs.png" alt=""></span>
-                </div>
-
-                <div class="flex items-center justify-center">
-                    <div class="h-full max-w-md shadow-none bg-global md:shadow-aroundColored rounded-2xl">
-                        <div class="relative flex w-full h-full overflow-hidden duration-500 ease-in-out transform scale-100 translate-x-10 translate-y-10 bg-white p-14 gap-x-28 place-items-center bg-opacity-70 backdrop-filter backdrop-blur-xl rounded-2xl shadow-around hover:scale-105">
-
-                            <div class="flex flex-col justify-center text-lg gap-y-8 font-cleanBold">
-                                <a class="grid grid-cols-2" href="https://fr.linkedin.com/in/alexandre-boutinaud-264302196">
-                                    <svg class="w-10" viewBox="0 0 128 128">
-                                        <path d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"></path>
-                                    </svg>
-                                    <span>Linkedin</span>
-                                </a>
-
-                                <a class="grid grid-cols-2" href="https://github.com/alexxbout">
-                                    <svg class="w-10" viewBox="0 0 128 128">
-                                        <g fill="#181616"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 1.512c-23.493 0-42.545 19.047-42.545 42.545 0 18.797 12.19 34.745 29.095 40.37 2.126.394 2.907-.923 2.907-2.047 0-1.014-.04-4.366-.058-7.92-11.837 2.573-14.334-5.02-14.334-5.02-1.935-4.918-4.724-6.226-4.724-6.226-3.86-2.64.29-2.586.29-2.586 4.273.3 6.523 4.385 6.523 4.385 3.794 6.504 9.953 4.623 12.38 3.536.383-2.75 1.485-4.628 2.702-5.69-9.45-1.075-19.384-4.724-19.384-21.026 0-4.645 1.662-8.44 4.384-11.42-.442-1.072-1.898-5.4.412-11.26 0 0 3.572-1.142 11.7 4.363 3.395-.943 7.035-1.416 10.65-1.432 3.616.017 7.258.49 10.658 1.432 8.12-5.504 11.688-4.362 11.688-4.362 2.316 5.86.86 10.187.418 11.26 2.728 2.978 4.378 6.774 4.378 11.42 0 16.34-9.953 19.938-19.427 20.99 1.526 1.32 2.886 3.91 2.886 7.88 0 5.692-.048 10.273-.048 11.674 0 1.13.766 2.458 2.922 2.04 16.896-5.632 29.07-21.574 29.07-40.365C106.545 20.56 87.497 1.512 64 1.512z"></path><path d="M37.57 62.596c-.095.212-.428.275-.73.13-.31-.14-.482-.427-.382-.64.09-.216.424-.277.733-.132.31.14.486.43.38.642zM39.293 64.52c-.203.187-.6.1-.87-.198-.278-.297-.33-.694-.124-.884.208-.188.593-.1.87.197.28.3.335.693.123.884zm1.677 2.448c-.26.182-.687.012-.95-.367-.262-.377-.262-.83.005-1.013.264-.182.684-.018.95.357.262.385.262.84-.005 1.024zm2.298 2.368c-.233.257-.73.188-1.093-.163-.372-.343-.475-.83-.242-1.087.237-.257.736-.185 1.102.163.37.342.482.83.233 1.086zm3.172 1.374c-.104.334-.582.485-1.064.344-.482-.146-.796-.536-.7-.872.1-.336.582-.493 1.067-.342.48.144.795.53.696.87zm3.48.255c.013.35-.396.642-.902.648-.508.012-.92-.272-.926-.618 0-.354.4-.642.908-.65.506-.01.92.272.92.62zm3.24-.551c.06.342-.29.694-.793.787-.494.092-.95-.12-1.014-.46-.06-.35.297-.7.79-.792.503-.088.953.118 1.017.466zm0 0"></path></g><path d="M24.855 108.302h-10.7a.5.5 0 00-.5.5v5.232a.5.5 0 00.5.5h4.173v6.5s-.937.32-3.53.32c-3.056 0-7.327-1.116-7.327-10.508 0-9.393 4.448-10.63 8.624-10.63 3.614 0 5.17.636 6.162.943.31.094.6-.216.6-.492l1.193-5.055a.468.468 0 00-.192-.39c-.403-.288-2.857-1.66-9.058-1.66-7.144 0-14.472 3.038-14.472 17.65 0 14.61 8.39 16.787 15.46 16.787 5.854 0 9.405-2.502 9.405-2.502.146-.08.162-.285.162-.38v-16.316a.5.5 0 00-.5-.5zM79.506 94.81H73.48a.5.5 0 00-.498.503l.002 11.644h-9.392V95.313a.5.5 0 00-.497-.503H57.07a.5.5 0 00-.498.503v31.53c0 .277.224.503.498.503h6.025a.5.5 0 00.497-.504v-13.486h9.392l-.016 13.486c0 .278.224.504.5.504h6.038a.5.5 0 00.497-.504v-31.53a.497.497 0 00-.497-.502zm-47.166.717c-2.144 0-3.884 1.753-3.884 3.923 0 2.167 1.74 3.925 3.884 3.925 2.146 0 3.885-1.758 3.885-3.925 0-2.17-1.74-3.923-3.885-3.923zm2.956 9.608H29.29c-.276 0-.522.284-.522.56v20.852c0 .613.382.795.876.795h5.41c.595 0 .74-.292.74-.805v-20.899a.5.5 0 00-.498-.502zm67.606.047h-5.98a.5.5 0 00-.496.504v15.46s-1.52 1.11-3.675 1.11-2.727-.977-2.727-3.088v-13.482a.5.5 0 00-.497-.504h-6.068a.502.502 0 00-.498.504v14.502c0 6.27 3.495 7.804 8.302 7.804 3.944 0 7.124-2.18 7.124-2.18s.15 1.15.22 1.285c.07.136.247.273.44.273l3.86-.017a.502.502 0 00.5-.504l-.003-21.166a.504.504 0 00-.5-.502zm16.342-.708c-3.396 0-5.706 1.515-5.706 1.515V95.312a.5.5 0 00-.497-.503H107a.5.5 0 00-.5.503v31.53a.5.5 0 00.5.503h4.192c.19 0 .332-.097.437-.268.103-.17.254-1.454.254-1.454s2.47 2.34 7.148 2.34c5.49 0 8.64-2.784 8.64-12.502s-5.03-10.988-8.428-10.988zm-2.36 17.764c-2.073-.063-3.48-1.004-3.48-1.004v-9.985s1.388-.85 3.09-1.004c2.153-.193 4.228.458 4.228 5.594 0 5.417-.935 6.486-3.837 6.398zm-63.689-.118c-.263 0-.937.107-1.63.107-2.22 0-2.973-1.032-2.973-2.368v-8.866h4.52a.5.5 0 00.5-.504v-4.856a.5.5 0 00-.5-.502h-4.52l-.007-5.97c0-.227-.116-.34-.378-.34h-6.16c-.238 0-.367.106-.367.335v6.17s-3.087.745-3.295.805a.5.5 0 00-.36.48v3.877a.5.5 0 00.497.503h3.158v9.328c0 6.93 4.86 7.61 8.14 7.61 1.497 0 3.29-.48 3.586-.59.18-.067.283-.252.283-.453l.004-4.265a.51.51 0 00-.5-.502z" fill="#100E0F"></path>
-                                    </svg>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex flex-col order-first gap-y-10 md:order-last">
+                <span class="text-2xl md:text-5xl font-cleanRegular">Un étudiant passionné par les&#160<span class="underline decoration-red-600">nouvelles technologies</span>, qui est prêt à mettre ses compétences à disposition pour de formidables&#160
+                <span class="underline decoration-green-600">projets</span>&#160!</span>
+                <span class="text-lg md:text-2xl font-cleanRegular"><i>“Selon moi, un bon développeur est quelqu’un qui a le sens du détail de la perfection et qui aime se mettre au service du produit, de son équipe et des utilisateurs.”</i></span>
             </div>
         </div>
-    </div>
-
-    <div class="py-14"></div>
+    </section>
 
     <!-- Compétences -->
-    <div id="skills" class="h-full px-5 py-5 lg:h-screen md:py-10 lg:px-20">
+    <section id="skills" class="h-full px-5 py-5 lg:h-screen md:py-10 lg:px-20">
         <div class="grid h-full gap-y-20 place-items-center">
 
-            <div class="text-3xl text-center transition-all duration-500 md:text-6xl font-cleanBold">
+            <div class="text-3xl text-center duration-500 md:text-6xl font-cleanBold">
                 <span>Des compétences à votre service.</span>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 xl:gap-x-20 gap-y-10 md:pb-0">
-                <div class="opacity-0 skillCard h-96 sm:h-full lg:h-full w-80 rounded-2xl shadow-around" id="chartdiv"></div>
+                <div class="opacity-0 skillCard h-96 sm:h-full lg:h-full w-80 bg-lightgray rounded-[30px]" id="chartdiv"></div>
 
-                <div class="flex flex-col h-full opacity-0 w-80 skillCard shadow-around rounded-2xl">
-                    <div class="flex flex-col items-center justify-center h-32 p-5 text-global gap-y-2 rounded-t-3xl">
+                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-[30px]">
+                    <div class="flex flex-col items-center justify-center h-32 p-5 gap-y-2 rounded-t-3xl">
                         <svg class="w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
@@ -141,8 +122,8 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col h-full opacity-0 w-80 skillCard shadow-around rounded-2xl">
-                    <div class="flex flex-col items-center justify-center h-32 p-5 text-global gap-y-2 rounded-t-3xl">
+                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-[30px]">
+                    <div class="flex flex-col items-center justify-center h-32 p-5 gap-y-2 rounded-t-3xl">
                         <svg class="w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                         </svg>
@@ -169,8 +150,8 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col h-full opacity-0 w-80 skillCard shadow-around rounded-2xl">
-                    <div class="flex flex-col items-center justify-center h-32 p-5 text-global gap-y-2 rounded-t-3xl">
+                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-[30px]">
+                    <div class="flex flex-col items-center justify-center h-32 p-5 gap-y-2 rounded-t-3xl">
                         <svg class="w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                         </svg>
@@ -190,102 +171,96 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="py-14"></div>
+    </section>
 
     <!-- Formations -->
-    <div id="training" class="h-full py-5 lg:h-screen md:py-10">
-        <div class="grid h-full place-items-center gap-y-20">
+    <section id="training" class="h-full px-5 py-5 md:py-10 lg:px-20">
 
-            <div class="text-3xl text-center transition-all duration-500 md:text-6xl font-cleanBold">
+        <div class="grid h-full gap-y-20 place-items-center">
+            <div class="text-3xl text-center duration-500 md:text-6xl font-cleanBold">
                 <span>Mes formations.</span>
             </div>
 
-            <div class="grid h-full sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-20 gap-y-10">
-
-                <div class="flex flex-col items-center justify-center p-4 text-center bg-white bg-opacity-30 gap-y-5 shadow-around rounded-2xl w-80">
-                    <div class="w-full h-full py-10 text-3xl bg-white gap-x-2 px-14 rounded-xl font-cleanExtraBold">
-                        <span>BTS SIO</span>
+            <!-- BTS SIO -->
+            <div class="rounded-[30px] w-max md:w-full p-10 md:p-0 max-w-[700px] h-[400px] bg-darkgray snap-center flex-shrink-0">
+                <div class="flex flex-col items-center justify-center w-full h-full py-5 text-white gap-y-20">
+                    <span class="text-6xl font-cleanBold">BTS SIO</span>
+                    <div class="flex flex-col text-center">
+                        <span class="text-white text-opacity-40">2020-2022</span>
+                        <span class="text-white text-opacity-40">Lycée Victor-et-Hélène-Basch</span>
+                        <span class="text-white text-opacity-40">Rennes</span>
                     </div>
-                    <div class="flex flex-col items-center justify-center w-full p-2 bg-white font-cleanRegular h-36 rounded-xl">
-                        <span>2020 - 2022</span>
-                        <span>Lycée Victor & Hélène Basch</span>
-                        <span>Rennes</span>
-                    </div>
-                    <a href="./public/training.html" class="flex items-center justify-center w-full h-16 text-lg text-white duration-500 transform bg-global gap-x-1 rounded-2xl font-cleanExtraBold hover:scale-95">
+                    <a href="./public/training.html" class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-bold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out">
                         <span>Continuer</span>
-                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
                     </a>
                 </div>
+            </div>
 
-                <div class="flex flex-col items-center justify-center p-4 text-center bg-white bg-opacity-30 gap-y-5 shadow-around rounded-2xl w-80">
-                    <div class="w-full h-full py-10 text-3xl bg-white gap-x-2 px-14 rounded-xl font-cleanExtraBold">
-                        <span>Stages</span>
+            <!-- Stages -->
+            <div class="rounded-[30px] w-max md:w-full p-10 md:p-0 max-w-[700px] h-[400px] bg-darkgray snap-center flex-shrink-0">
+                <div class="flex flex-col items-center justify-center w-full h-full py-5 text-white gap-y-20">
+                    <span class="text-6xl font-cleanBold">Stages</span>
+                    <div class="flex flex-col text-center">
+                        <span class="text-white text-opacity-40">Développeur Web Full-Stack</span>
+                        <span class="text-white text-opacity-40">Okmont</span>
+                        <span class="text-white text-opacity-40">Melesse</span>
                     </div>
-                    <div class="flex flex-col items-center justify-center w-full p-2 bg-white font-cleanRegular h-36 rounded-xl">
-                        <span>Développeur Full Stack</span>
-                        <span>OKMONT</span>
-                        <span>Melesse</span>
-                    </div>
-                    <div class="flex items-center justify-center w-full h-16 text-lg text-white bg-gray-300 cursor-not-allowed gap-x-1 rounded-2xl font-cleanExtraBold">
+                    <a class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-bold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out" href="">
                         <span>Continuer</span>
-                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
+                    </a>
                 </div>
+            </div>
 
-                <div class="flex flex-col items-center justify-center p-4 text-center bg-white bg-opacity-30 gap-y-5 shadow-around rounded-2xl w-80">
-                    <div class="w-full h-full py-10 text-3xl bg-white gap-x-2 px-14 rounded-xl font-cleanExtraBold">
-                        <span>Formations</span>
+            <!-- Formations -->
+            <div class="rounded-[30px] w-max md:w-full p-8 md:p-10 max-w-[700px] h-[400px] bg-darkgray snap-center flex-shrink-0">
+                <div class="flex flex-col items-center justify-center w-full h-full py-5 text-white gap-y-20">
+                    <span class="text-6xl font-cleanBold">Formations</span>
+                    <div class="flex flex-col text-center">
+                        <span class="text-white text-opacity-40">OpenClassRooms</span>
+                        <span class="text-white text-opacity-40">Pix</span>
                     </div>
-                    <div class="flex flex-col items-center justify-center w-full p-2 bg-white font-cleanRegular h-36 rounded-xl">
-                        <span>OpenClassRooms</span>
-                        <span>Pix</span>
-                    </div>
-                    <div class="flex items-center justify-center w-full h-16 text-lg text-white bg-gray-300 cursor-not-allowed gap-x-1 rounded-2xl font-cleanExtraBold">
+                    <a class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-bold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out" href="">
                         <span>Continuer</span>
-                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="py-14"></div>
+    </section>
 
     <!-- Contacts -->
-    <div id="contacts" class="h-screen px-5 py-5 md:py-10 lg:px-20">
-        <div class="grid place-items-center gap-y-20">
-            <div class="text-3xl text-center transition-all duration-500 md:text-6xl font-cleanBold">
-                <span>Collaborons ensemble !</span>
+    <!-- <section id="contacts" class="h-full px-5 py-5 md:px-0 md:py-0">
+        <div class="grid h-full md:grid-cols-2 place-items-center">
+            <div class="flex flex-col items-center justify-center">
+                <div class="text-3xl text-center duration-500 md:text-6xl font-cleanBold">
+                    <span>Restons en contact !</span>
+                </div>
+                <img src="./public/img/hey.png" alt="">
             </div>
 
-            <div class="flex flex-col p-10 mt-32 bg-white shadow-around rounded-2xl gap-y-5">
-                <div class="text-3xl font-cleanBold">
-                    <span>Coordonnées</span>
-                </div>
+            <div class="flex items-center justify-center w-full py-10 md:pl-10 h-max">
+                <div class="bg-darkgray rounded-[40px] md:rounded-r-none h-max w-full p-10 font-cleanRegular text-xl flex-col flex justify-center gap-y-10">
+                    <div>
+                        <span class="text-white">Nom</span>
+                        <input class="w-full p-1 rounded-md bg-lightgray" type="text">
+                    </div>
+                    <div>
+                        <span class="text-white">Prenom</span>
+                        <input class="w-full p-1 rounded-md bg-lightgray" type="text">
+                    </div>
+                    <div>
+                        <span class="text-white">Adresse email</span>
+                        <input class="w-full p-1 rounded-md bg-lightgray" type="text">
+                    </div>
+                    <div>
+                        <span class="text-white">Message</span>
+                        <textarea class="w-full p-1 rounded-md bg-lightgray" name="" id="" cols="20" rows="2"></textarea>
+                    </div>
 
-                <div class="flex gap-x-2">
-                    <span class="font-cleanBold">Adresse Email :</span>
-                    <span>boutinaud.pro[at]gmail.com</span>
-                </div>
-
-                <div>
-                    <a class="font-cleanBold" href="https://fr.linkedin.com/in/alexandre-boutinaud-264302196">Linkedin</a>
-                </div>
-
-                <div>
-                    <a class="font-cleanBold" href="https://github.com/alexxbout">GitHub</a>
+                    <button class="p-2 text-base rounded-md w-max bg-lightgray font-cleanBold">Envoyer</button>
                 </div>
             </div>
         </div>
-    </div>
+    </section> -->
 </body>
 
 </html>
@@ -294,4 +269,9 @@
 <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 <script src="./public/scripts/main.js"></script>

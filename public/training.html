@@ -12,12 +12,6 @@
 
 <body class="relative px-5 overflow-x-hidden overflow-y-visible select-none md:px-10 text-customGray font-cleanLight">
 
-    <!-- <a href="../index.html#training" class="absolute flex items-center justify-center p-1 transition-all duration-500 ease-in-out transform bg-red-200 top-3 right-2 rounded-xl shadow-around hover:scale-90">
-        <svg class="text-red-600 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg>
-    </a> -->
-
     <a href="../index.html#training" class="absolute left-0 flex items-center justify-center text-gray-500 top-3 font-cleanRegular">
         <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
@@ -91,34 +85,34 @@
 
                 <!-- Data -->
                 <div class="flex flex-col items-center justify-center w-full h-full gap-y-5 dataSection">
-                    <!-- Hidden auto generated data -->
-                    <div class="hidden w-full h-full bg-white border-4 cursor-pointer shadow-around rounded-3xl grayscale">
-                        <div class="relative flex items-center justify-between">
-                            <div class="absolute inset-0 w-full rounded-t-3xl"></div>
 
+                    <div class="hidden w-full h-full bg-white cursor-pointer shadow-around rounded-3xl data">
+                        <div class="relative flex items-center justify-between header">
+                            <div class="absolute inset-0 w-full rounded-t-3xl revealSection"></div>
                             <div class="flex items-center justify-center m-5 font-cleanBold gap-x-2">
                                 <div class="relative flex items-center justify-start h-full w-max mr-7">
-                                    <svg class="absolute w-6 h-6 text-global folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg class="absolute w-6 h-6 text-amber-600 folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
                                     </svg>
                                 </div>
+                                <span class="title">${titre}</span>
                             </div>
-
-                            <svg class="w-6 h-6 m-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="w-6 h-6 m-5 arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
 
                         <div class="flex-col hidden mx-5 mb-5 border-t border-gray-200 cursor-default content">
                             <div class="mt-5"></div>
-                            <span><span class="font-cleanBold"></span></span>
-                            <span><span class="font-cleanBold"></span></span>
+                            <span><span class="font-cleanBold">Contexte : </span>${contexte}</span>
+                            <span><span class="font-cleanBold">Missions : </span>${missions}</span>
                             <div class="flex flex-col my-5">
-                                <span class="font-cleanBold"></span>
-                                <ul class="ml-5 list-disc"></ul>
+                                <span class="font-cleanBold">Compétences :</span>
+                                <ul class="ml-5 list-disc">
+                                </ul>
                             </div>
-                            <a class="p-2 text-center text-white duration-500 ease-in-out transform rounded-xl shadow-aroundColored bg-global font-cleanBold w-max hover:scale-95" target="_blank" href="${productions}"></a>
-                            <div class="p-2 text-center text-white duration-500 bg-gray-300 cursor-not-allowed rounded-xl shadow-around font-cleanBold w-max"></div>
+                            <a class="p-2 text-center text-white duration-500 ease-in-out transform rounded-xl shadow-aroundColored bg-darkgray font-cleanBold w-max hover:scale-95" target="_blank" href="">Productions</a>
+                            <div class="p-2 text-center text-white duration-500 bg-gray-300 cursor-not-allowed rounded-xl shadow-around font-cleanBold w-max">Productions</div>
                         </div>
                     </div>
                 </div>
@@ -148,8 +142,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col items-center justify-center w-full h-full gap-y-5 dataSection">
-                </div>
+                <div class="flex flex-col items-center justify-center w-full h-full gap-y-5 dataSection"></div>
             </div>
 
             <!-- Bloc B2 -->
@@ -173,8 +166,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col items-center justify-center w-full h-full gap-y-5 dataSection">
-                </div>
+                <div class="flex flex-col items-center justify-center w-full h-full gap-y-5 dataSection"></div>
             </div>
         </div>
     </div>
