@@ -19,7 +19,11 @@ module.exports = {
             },
             boxShadow: {
                 around: "rgba(0, 0, 0, 0.2) 0px 18px 50px -10px",
-                aroundColored: "0px 10px 100px -35px #FF5200"
+                aroundXl: "rgba(0, 0, 0, 0.2) 0px 30px 50px -10px",
+            },
+            borderRadius: {
+                "customXl": "30px",
+                "customLg": "15px"
             }
         }
     },

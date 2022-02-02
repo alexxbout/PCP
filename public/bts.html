@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -10,14 +10,22 @@
     <link rel="icon" href="./img/portfolio.png">
 </head>
 
-<body class="relative px-5 overflow-x-hidden overflow-y-visible select-none md:px-10 text-customGray font-cleanLight">
+<body class="relative px-5 overflow-x-hidden overflow-y-visible select-none md:px-10 text-darkgray font-cleanLight">
 
-    <a href="../index.html#training" class="absolute left-0 flex items-center justify-center text-gray-500 top-3 font-cleanRegular">
-        <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-          </svg>
-        <span>Retour</span>
-    </a>
+    <div class="relative">
+        <a href="../index.html#training" class="fixed z-50 flex items-center justify-center p-2 text-gray-500 bg-white rounded-md shadow-around bg-opacity-60 backdrop-blur left-2 top-2 font-cleanRegular">
+            <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+            <span>Retour</span>
+        </a>
+
+        <a href="#" class="fixed z-50 flex items-center justify-center p-2 text-gray-500 bg-white rounded-md shadow-around bg-opacity-60 backdrop-blur right-2 top-2 font-cleanRegular">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+        </a>
+    </div>
 
     <div class="grid w-full h-full divide-y divide-gray-200 place-items-center">
 
@@ -25,28 +33,28 @@
 
             <div class="flex flex-wrap items-center justify-center h-full text-center gap-x-32">
                 <span class="md:text-9xl text-7xl font-cleanBold">BTS SIO</span>
-                <a href="https://drive.google.com/drive/folders/1zs3bDp5cKfcYaPIL1vPZTXZ3mDlyXIBC?usp=sharing" target="_blank" class="flex flex-col items-center justify-center w-40 h-40 text-center transition-transform duration-500 ease-in-out transform bg-white md:w-60 md:h-60 rounded-2xl shadow-around gap-y-10 hover:scale-95">
+                <a href="https://drive.google.com/drive/folders/1zs3bDp5cKfcYaPIL1vPZTXZ3mDlyXIBC?usp=sharing" target="_blank" class="flex flex-col items-center justify-center w-40 h-40 text-center transition-transform duration-500 ease-in-out transform bg-white md:w-60 md:h-60 rounded-customLg shadow-around gap-y-10 hover:scale-95">
                     <span class="text-lg md:text-xl font-cleanRegular">Accéder au Drive</span>
                     <img class="w-8 md:w-16" src="./img/cloud.svg" alt="Cloud">
                 </a>
             </div>
 
             <div class="flex flex-wrap items-center justify-center text-3xl text-center font-cleanBold gap-x-5 gap-y-5 md:gap-x-20 md:gap-y-20">
-                <a href="#data" id="apBtn" class="relative flex items-center justify-center w-32 h-32 text-center transition-transform duration-500 ease-in-out transform bg-white border-global sectionBtn filter shadow-around rounded-2xl group hover:scale-90 hover:grayscale-0">
+                <a href="#data" id="apBtn" class="relative flex items-center justify-center w-32 h-32 text-center transition-transform duration-500 ease-in-out transform bg-white border-global sectionBtn filter shadow-around rounded-customLg group hover:scale-90 hover:grayscale-0">
                     <span class="text-global">AP</span>
 
                     <svg class="absolute w-6 transition-opacity duration-500 ease-in-out opacity-0 bottom-2 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
                     </svg>
                 </a>
-                <a href="#data" id="b1Btn" class="relative flex items-center justify-center w-32 h-32 text-center transition-transform duration-500 ease-in-out transform bg-white border-global sectionBtn filter shadow-around rounded-2xl group hover:scale-90 hover:grayscale-0">
+                <a href="#data" id="b1Btn" class="relative flex items-center justify-center w-32 h-32 text-center transition-transform duration-500 ease-in-out transform bg-white border-global sectionBtn filter shadow-around rounded-customLg group hover:scale-90 hover:grayscale-0">
                     <span class="text-global">B1</span>
 
                     <svg class="absolute w-6 transition-opacity duration-500 ease-in-out opacity-0 bottom-2 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
                     </svg>
                 </a>
-                <a href="#data" id="b2Btn" class="relative flex items-center justify-center w-32 h-32 text-center transition-transform duration-500 ease-in-out transform bg-white border-global sectionBtn filter shadow-around rounded-2xl group hover:scale-90 hover:grayscale-0">
+                <a href="#data" id="b2Btn" class="relative flex items-center justify-center w-32 h-32 text-center transition-transform duration-500 ease-in-out transform bg-white border-global sectionBtn filter shadow-around rounded-customLg group hover:scale-90 hover:grayscale-0">
                     <span class="text-global">B2</span>
 
                     <svg class="absolute w-6 transition-opacity duration-500 ease-in-out opacity-0 bottom-2 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,8 +68,8 @@
             <!-- AP -->
             <div id="apSection" class="hidden my-10 section gap-y-10">
                 <!-- Header -->
-                <div class="grid p-5 bg-white md:grid-cols-2 gap-y-10 place-items-center justify-items-stretch rounded-2xl shadow-around header">
-                    <a href="https://drive.google.com/drive/folders/1g4vWSq6pxH1fVTpa69b10N9jbVxQ-V-s?usp=sharing" target="_blank" class="flex flex-col items-center justify-center p-2 text-center transition-transform duration-500 ease-in-out transform font-cleanBold rounded-2xl bg-lightgray md:w-60 md:h-60 gap-y-10 hover:scale-95">
+                <div class="grid p-5 bg-white md:grid-cols-2 gap-y-10 place-items-center justify-items-stretch rounded-customLg shadow-around header">
+                    <a href="https://drive.google.com/drive/folders/1g4vWSq6pxH1fVTpa69b10N9jbVxQ-V-s?usp=sharing" target="_blank" class="flex flex-col items-center justify-center p-2 text-center transition-transform duration-500 ease-in-out transform font-cleanBold rounded-customLg bg-lightgray md:w-60 md:h-60 gap-y-10 hover:scale-95">
                         <span class="text-lg md:text-xl">Ateliers de professionnalisation</span>
                         <svg class="w-8 md:w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -79,14 +87,14 @@
                 </div>
 
                 <!-- Infos -->
-                <div class="relative grid p-5 bg-white gap-y-10 place-items-center justify-items-stretch rounded-2xl shadow-around header">
+                <div class="relative grid p-5 bg-white gap-y-10 place-items-center justify-items-stretch rounded-customLg shadow-around header">
                     <span class="relative text-lg break-words md:text-xl">Ces séances d'ateliers de professionnalisation m'ont permis d'être confronté aux situations du monde du travail. J'ai répondu aux missions données en appliquant les connaissances acquises dans les autres blocs de compétences. Ces séances m'ont aussi formé sur les bonnes pratiques à avoir, notamment en terme de cybersécurité dans les phases de conception des applications. Le travail d'équipe ainsi que la répartition des tâches étaient un des points clé pour faire évoluer les ateliers et pouvoir les rendre en temps et en heure.</span>
                 </div>
 
                 <!-- Data -->
                 <div class="flex flex-col items-center justify-center w-full h-full gap-y-5 dataSection">
 
-                    <div class="hidden w-full h-full bg-white cursor-pointer shadow-around rounded-3xl data">
+                    <div class="hidden w-full h-full bg-white border-4 cursor-pointer shadow-around rounded-3xl data">
                         <div class="relative flex items-center justify-between header">
                             <div class="absolute inset-0 w-full rounded-t-3xl revealSection"></div>
                             <div class="flex items-center justify-center m-5 font-cleanBold gap-x-2">
@@ -111,7 +119,7 @@
                                 <ul class="ml-5 list-disc">
                                 </ul>
                             </div>
-                            <a class="p-2 text-center text-white duration-500 ease-in-out transform rounded-xl shadow-aroundColored bg-darkgray font-cleanBold w-max hover:scale-95" target="_blank" href="">Productions</a>
+                            <a class="p-2 text-center text-white duration-500 ease-in-out transform rounded-xl shadow-around bg-darkgray font-cleanBold w-max hover:scale-95" target="_blank" href="">Productions</a>
                             <div class="p-2 text-center text-white duration-500 bg-gray-300 cursor-not-allowed rounded-xl shadow-around font-cleanBold w-max">Productions</div>
                         </div>
                     </div>
@@ -120,8 +128,8 @@
 
             <!-- Bloc B1 -->
             <div id="b1Section" class="hidden my-10 section gap-y-10">
-                <div class="grid p-5 bg-white md:grid-cols-2 gap-y-10 place-items-center justify-items-stretch rounded-2xl shadow-around header">
-                    <a href="https://drive.google.com/drive/folders/1dYuSgxyO9eaH-x_C1QVEn-FX-NXGiKOS?usp=sharing" target="_blank" class="flex flex-col items-center justify-center p-2 text-center transition-transform duration-500 ease-in-out transform font-cleanBold rounded-2xl bg-lightgray md:w-60 md:h-60 gap-y-10 hover:scale-95">
+                <div class="grid p-5 bg-white md:grid-cols-2 gap-y-10 place-items-center justify-items-stretch rounded-customLg shadow-around header">
+                    <a href="https://drive.google.com/drive/folders/1dYuSgxyO9eaH-x_C1QVEn-FX-NXGiKOS?usp=sharing" target="_blank" class="flex flex-col items-center justify-center p-2 text-center transition-transform duration-500 ease-in-out transform font-cleanBold rounded-customLg bg-lightgray md:w-60 md:h-60 gap-y-10 hover:scale-95">
                         <span class="text-lg md:text-xl">Bloc B1</span>
                         <svg class="w-8 md:w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -147,8 +155,8 @@
 
             <!-- Bloc B2 -->
             <div id="b2Section" class="hidden my-10 section gap-y-10">
-                <div class="grid p-5 bg-white md:grid-cols-2 gap-y-10 place-items-center justify-items-stretch rounded-2xl shadow-around header">
-                    <a href="https://drive.google.com/drive/folders/10Sz_7yevDKjiQ8WtnpDEXHVStguGwJDO?usp=sharing" target="_blank" class="flex flex-col items-center justify-center p-2 text-center transition-transform duration-500 ease-in-out transform font-cleanBold rounded-2xl bg-lightgray md:w-60 md:h-60 gap-y-10 hover:scale-95">
+                <div class="grid p-5 bg-white md:grid-cols-2 gap-y-10 place-items-center justify-items-stretch rounded-customLg shadow-around header">
+                    <a href="https://drive.google.com/drive/folders/10Sz_7yevDKjiQ8WtnpDEXHVStguGwJDO?usp=sharing" target="_blank" class="flex flex-col items-center justify-center p-2 text-center transition-transform duration-500 ease-in-out transform font-cleanBold rounded-customLg bg-lightgray md:w-60 md:h-60 gap-y-10 hover:scale-95">
                         <span class="text-lg md:text-xl">Bloc B2</span>
                         <svg class="w-8 md:w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

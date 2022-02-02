@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -11,50 +11,82 @@
     <link rel="icon" href="./public/img/portfolio.png">
 </head>
 
-<body class="flex flex-col overflow-x-hidden overflow-y-visible select-none text-customGray font-cleanLight scroll-smooth gap-y-20">
+<body class="flex flex-col overflow-x-hidden overflow-y-visible select-none font-cleanLight gap-y-10 text-darkgray">
     <!-- Homepage -->
-    <section id="homepage" class="h-screen px-20 py-10">
-        <header class="flex items-center justify-center w-full pt-5 text-white">
-            <ul class="font-cleanBold flex p-4 px-6 items-center justify-center rounded-full w-max gap-x-20 bg-darkgray shadow-[0_0_80px_5px_rgba(255,255,255,0.25)]">
-                <li class="flex items-center justify-center gap-x-2">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
-                    </svg>
-                    <span>Qui suis-je ?</span>
-                </li>
-                <li class="flex items-center justify-center gap-x-2">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-                    </svg>
-                    <span>Compétences</span>
-                </li>
-                <li class="flex items-center justify-center gap-x-2">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-                    </svg>
-                    <span>Formations</span>
-                </li>
-                <!-- <li class="flex items-center justify-center gap-x-2">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                    <span>Contacts</span>
-                </li> -->
-            </ul>
-        </header>
 
-        <div class="grid w-full h-full place-items-center">
-            <div class="flex flex-col text-8xl">
-                <span class="font-cleanBold">Bonjour ! Je m'appelle Alexandre.</span>
-                <div class="w-full my-5 border-b-2 border-darkgray"></div>
+    <section id="homepage" class="grid w-screen h-screen gap-5 p-5 lg:p-0 place-content-around lg:gap-0">
 
-                <span class="text-5xl text-opacity-40">Je suis étudiant en informatique et développeur full-stack.</span>
-                <span class="text-5xl text-opacity-40">J'aime créer des choses simples et intuitives.</span>
+        <div class="grid w-full h-full grid-flow-col gap-5 auto-cols-auto">
+
+            <div class="grid w-full grid-rows-2 gap-5">
+                <div class="flex flex-col justify-center w-full h-full font-cleanRegular card">
+                    <span class="text-xl lg:text-5xl font-cleanExtraBold">Bonjour ! Je m’appelle Alexandre.</span>
+                    <span class="mt-5 text-sm leading-5 text-darkgray text-opacity-40">Je suis étudiant en informatique et développeur full-stack.</span>
+                    <span class="text-sm text-darkgray text-opacity-40">J'aime créer des choses simples et intuitives.</span>
+                </div>
+
+                <div class="w-full lg:hidden">
+                    <div class="flex items-center justify-center w-full h-max dark_card">
+                        <img class="w-48" src="./public/img/bitmoji.png" alt="">
+                    </div>
+                </div>
+
+                <div class="grid w-full grid-cols-2 gap-5 lg:grid-cols-4 place-items-stretch">
+                    <a href="#experiences" class="flex flex-col items-center justify-center p-10 gap-y-2 card font-cleanBold aspect-square nav_section">
+                        <svg class="w-10 lg:w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Qui suis-je ?</span>
+                    </a>
+                    <a href="#skills" class="flex flex-col items-center justify-center p-10 gap-y-2 card font-cleanBold aspect-square nav_section">
+                        <svg class="w-10 lg:w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
+                            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                        </svg>
+                        <span>Compétences</span>
+                    </a>
+                    <a href="#training" class="flex flex-col items-center justify-center p-10 gap-y-2 card font-cleanBold aspect-square nav_section">
+                        <svg class="w-10 lg:w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                        </svg>
+                        <span>Formations</span>
+                    </a>
+                    <div class="flex flex-col items-center justify-center p-10 gap-y-2 card font-cleanBold aspect-square nav_section">
+                        <svg class="w-10 lg:w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                        <span>Contacts</span>
+                    </div>
+                </div>
             </div>
-            <!-- <div>
-                <img src="./public/img/bitmoji.png" alt="">
-            </div> -->
+
+            <div class="hidden w-full lg:grid">
+                <div class="flex items-center justify-center w-full h-full dark_card">
+                    <img class="" src="./public/img/bitmoji.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden w-full h-2 rounded-full lg:flex bg-lightgray">
+        </div>
+
+        <div class="hidden w-full h-full lg:grid">
+            <div class="flex w-full h-full gap-2 lg:gap-10 card">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Java</title><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Python</title><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>PHP</title><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zM17.766 10.207h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CSS3</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Tailwind CSS</title><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CodeIgniter</title><path d="M11.466 0c.88 1.423-.28 3.306-1.207 4.358-.899 1.02-1.992 1.873-2.985 2.8-1.066.996-2.091 2.044-2.967 3.213-1.753 2.339-2.827 5.28-2.038 8.199.788 2.916 3.314 4.772 6.167 5.429-1.44-.622-2.786-2.203-2.79-3.82-.003-1.765 1.115-3.262 2.505-4.246-.167.632-.258 1.21.155 1.774a1.68 1.68 0 0 0 1.696.642c1.487-.326 1.556-1.96.674-2.914-.872-.943-1.715-2.009-1.384-3.377.167-.685.588-1.328 1.121-1.787-.41 1.078.755 2.14 1.523 2.67 1.332.918 2.793 1.612 4.017 2.688 1.288 1.132 2.24 2.661 2.047 4.435-.208 1.923-1.736 3.26-3.45 3.936 3.622-.8 7.365-3.61 7.44-7.627.093-3.032-1.903-5.717-5.158-7.384.19.48.074.697-.058.924-.55.944-2.082 1.152-2.835.184-1.205-1.548.025-3.216.197-4.855.215-2.055-1.073-4.049-2.67-5.242z"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>JavaScript</title><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitLab</title><path d="M4.845.904c-.435 0-.82.28-.955.692C2.639 5.449 1.246 9.728.07 13.335a1.437 1.437 0 00.522 1.607l11.071 8.045c.2.145.472.144.67-.004l11.073-8.04a1.436 1.436 0 00.522-1.61c-1.285-3.942-2.683-8.256-3.817-11.746a1.004 1.004 0 00-.957-.684.987.987 0 00-.949.69l-2.405 7.408H8.203l-2.41-7.408a.987.987 0 00-.942-.69h-.006zm-.006 1.42l2.173 6.678H2.675zm14.326 0l2.168 6.678h-4.341zm-10.593 7.81h6.862c-1.142 3.52-2.288 7.04-3.434 10.559L8.572 10.135zm-5.514.005h4.321l3.086 9.5zm13.567 0h4.325c-2.467 3.17-4.95 6.328-7.411 9.502 1.028-3.167 2.059-6.334 3.086-9.502zM2.1 10.762l6.977 8.947-7.817-5.682a.305.305 0 01-.112-.341zm19.798 0l.952 2.922a.305.305 0 01-.11.341v.002l-7.82 5.68.026-.035z"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>C Sharp</title><path d="M12 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0zM9.426 7.12a5.55 5.55 0 011.985.38v1.181a4.5 4.5 0 00-2.25-.566 3.439 3.439 0 00-2.625 1.087 4.099 4.099 0 00-1.012 2.906 3.9 3.9 0 00.945 2.754 3.217 3.217 0 002.482 1.023 4.657 4.657 0 002.464-.634l-.004 1.08a5.543 5.543 0 01-2.625.555 4.211 4.211 0 01-3.228-1.297 4.793 4.793 0 01-1.212-3.409 5.021 5.021 0 011.365-3.663 4.631 4.631 0 013.473-1.392 5.55 5.55 0 01.12-.004 5.55 5.55 0 01.122 0zm5.863.155h.836l-.555 2.652h1.661l.567-2.652h.81l-.555 2.652 1.732-.004-.15.697H17.91l-.412 1.98h1.852l-.176.698h-1.816l-.58 2.625h-.83l.567-2.625h-1.65l-.555 2.625h-.81l.555-2.625h-1.74l.131-.698h1.748l.401-1.976h-1.826l.138-.697h1.826zm.142 3.345L15 12.6h1.673l.423-1.98z"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Apple</title><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Android</title><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3435-4.1021-2.6892-7.5743-6.1185-9.4396"/></svg>
+            </div>
         </div>
 
     </section>
@@ -62,9 +94,9 @@
     <!-- Qui suis-je ? -->
     <section id="experiences" class="h-screen px-5 py-5 md:py-10 md:px-20">
         <div class="flex flex-col items-center justify-center h-screen md:flex-row gap-x-20 gap-y-10">
-            <div class="flex flex-col rounded-[45px] bg-darkgray place-items-center shadow-[0_0_100px_20px_#00000026] order-last md:order-first">
+            <div class="flex flex-col rounded-[45px] bg-darkgray place-items-center order-last md:order-first">
                 <img class="w-56" src="./public/img/pc.png" alt="">
-                <div class="flex flex-col justify-center py-7 px-16 m-7 text-2xl gap-y-7 bg-lightgray rounded-[30px] font-cleanBold">
+                <div class="flex flex-col justify-center px-16 text-2xl py-7 m-7 gap-y-7 bg-lightgray rounded-customXl font-cleanBold">
                     <a href="https://fr.linkedin.com/in/alexandre-boutinaud-264302196" class="flex h-full gap-x-5 w-max">
                         <img class="w-10" src="./public/img/linkedin.svg" alt="">
                         <span>Linkedin</span>
@@ -77,8 +109,8 @@
             </div>
             <div class="flex flex-col order-first gap-y-10 md:order-last">
                 <span class="text-2xl md:text-5xl font-cleanRegular">Un étudiant passionné par les&#160<span class="underline decoration-red-600">nouvelles technologies</span>, qui est prêt à mettre ses compétences à disposition pour de formidables&#160
-                <span class="underline decoration-green-600">projets</span>&#160!</span>
-                <span class="text-lg md:text-2xl font-cleanRegular"><i>“Selon moi, un bon développeur est quelqu’un qui a le sens du détail de la perfection et qui aime se mettre au service du produit, de son équipe et des utilisateurs.”</i></span>
+                <span class="underline decoration-red-600">projets</span>&#160!</span>
+                <span class="text-lg italic md:text-2xl font-cleanRegular">“Selon moi, un bon développeur est quelqu’un qui a le sens du détail de la perfection et qui aime se mettre au service du produit, de son équipe et des utilisateurs.”</span>
             </div>
         </div>
     </section>
@@ -92,9 +124,9 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 xl:gap-x-20 gap-y-10 md:pb-0">
-                <div class="opacity-0 skillCard h-96 sm:h-full lg:h-full w-80 bg-lightgray rounded-[30px]" id="chartdiv"></div>
+                <div class="opacity-0 skillCard h-96 sm:h-full lg:h-full w-80 bg-lightgray rounded-customXl" id="chartdiv"></div>
 
-                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-[30px]">
+                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-customXl">
                     <div class="flex flex-col items-center justify-center h-32 p-5 gap-y-2 rounded-t-3xl">
                         <svg class="w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -122,7 +154,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-[30px]">
+                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-customXl">
                     <div class="flex flex-col items-center justify-center h-32 p-5 gap-y-2 rounded-t-3xl">
                         <svg class="w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
@@ -150,7 +182,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-[30px]">
+                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-customXl">
                     <div class="flex flex-col items-center justify-center h-32 p-5 gap-y-2 rounded-t-3xl">
                         <svg class="w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
@@ -174,52 +206,53 @@
     </section>
 
     <!-- Formations -->
-    <section id="training" class="h-full px-5 py-5 md:py-10 lg:px-20">
+    <section id="training" class="grid h-full px-5 py-5 place-items-center md:py-10 lg:px-20 gap-y-20">
 
-        <div class="grid h-full gap-y-20 place-items-center">
-            <div class="text-3xl text-center duration-500 md:text-6xl font-cleanBold">
-                <span>Mes formations.</span>
-            </div>
+        <div class="text-3xl text-center duration-500 md:text-6xl font-cleanBold">
+            <span>Mes formations.</span>
+        </div>
+
+        <div class="grid h-full gap-10 lg:grid-cols-3 place-items-center">
 
             <!-- BTS SIO -->
-            <div class="rounded-[30px] w-max md:w-full p-10 md:p-0 max-w-[700px] h-[400px] bg-darkgray snap-center flex-shrink-0">
-                <div class="flex flex-col items-center justify-center w-full h-full py-5 text-white gap-y-20">
-                    <span class="text-6xl font-cleanBold">BTS SIO</span>
+            <div class="h-full p-10 rounded-customXl w-96 md:p-0 bg-darkgray">
+                <div class="grid w-full h-full grid-rows-3 py-5 text-white place-items-center gap-y-20">
+                    <span class="text-3xl lg:text-6xl font-cleanBold">BTS SIO</span>
                     <div class="flex flex-col text-center">
                         <span class="text-white text-opacity-40">2020-2022</span>
                         <span class="text-white text-opacity-40">Lycée Victor-et-Hélène-Basch</span>
                         <span class="text-white text-opacity-40">Rennes</span>
                     </div>
-                    <a href="./public/training.html" class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-bold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out">
+                    <a href="./public/bts.html" class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-cleanBold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out">
                         <span>Continuer</span>
                     </a>
                 </div>
             </div>
 
             <!-- Stages -->
-            <div class="rounded-[30px] w-max md:w-full p-10 md:p-0 max-w-[700px] h-[400px] bg-darkgray snap-center flex-shrink-0">
-                <div class="flex flex-col items-center justify-center w-full h-full py-5 text-white gap-y-20">
-                    <span class="text-6xl font-cleanBold">Stages</span>
+            <div class="h-full p-10 rounded-customXl w-96 md:p-0 bg-darkgray">
+                <div class="grid w-full h-full grid-rows-3 py-5 text-white place-items-center gap-y-20">
+                    <span class="text-3xl lg:text-6xl font-cleanBold">Stages</span>
                     <div class="flex flex-col text-center">
                         <span class="text-white text-opacity-40">Développeur Web Full-Stack</span>
                         <span class="text-white text-opacity-40">Okmont</span>
                         <span class="text-white text-opacity-40">Melesse</span>
                     </div>
-                    <a class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-bold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out" href="">
+                    <a href="./public/stages.html" class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-cleanBold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out" href="">
                         <span>Continuer</span>
                     </a>
                 </div>
             </div>
 
             <!-- Formations -->
-            <div class="rounded-[30px] w-max md:w-full p-8 md:p-10 max-w-[700px] h-[400px] bg-darkgray snap-center flex-shrink-0">
-                <div class="flex flex-col items-center justify-center w-full h-full py-5 text-white gap-y-20">
-                    <span class="text-6xl font-cleanBold">Formations</span>
+            <div class="h-full p-10 rounded-customXl w-96 md:p-0 bg-darkgray">
+                <div class="grid w-full h-full grid-rows-3 py-5 text-white place-items-center gap-y-20">
+                    <span class="text-3xl lg:text-6xl font-cleanBold">Formations</span>
                     <div class="flex flex-col text-center">
                         <span class="text-white text-opacity-40">OpenClassRooms</span>
                         <span class="text-white text-opacity-40">Pix</span>
                     </div>
-                    <a class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-bold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out" href="">
+                    <a href="./public/formations.html" class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-cleanBold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out" href="">
                         <span>Continuer</span>
                     </a>
                 </div>
@@ -263,15 +296,15 @@
     </section> -->
 </body>
 
-</html>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
 <script src="./public/scripts/main.js"></script>
+
+<script src="https://ryandejaegher.com/js/marquee.js" defer></script>
+
+</html>

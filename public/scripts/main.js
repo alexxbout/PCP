@@ -75,7 +75,7 @@ function loadAnimations() {
 }
 
 /**
- * Remove amCharts watermark
+ * Remove AmCharts watermark
  */
 function hackAmCharts() {
     document.querySelectorAll("[aria-labelledby^='id-'][aria-labelledby$='-title']").forEach((item) => {

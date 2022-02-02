@@ -195,11 +195,11 @@ export function buildData() {
 function build(sectionId, titre, contexte, missions, competences, productions) {
     let parent = document.querySelector(`#${sectionId} .dataSection`);
 
-    let html = `<div class="w-full h-full bg-white cursor-pointer shadow-around rounded-3xl data">
+    let html = `<div class="w-full h-full bg-white cursor-pointer shadow-around rounded-customLg data">
     
                     <div class="flex items-center justify-between header relative">
 
-                        <div class="absolute inset-0 w-full rounded-t-3xl revealSection"></div>
+                        <div class="absolute inset-0 w-full rounded-t-customLg revealSection"></div>
 
                         <div class="flex items-center justify-center font-cleanBold gap-x-2 m-5">
                             <div class="h-full w-max relative flex items-center justify-start mr-7">
@@ -230,7 +230,7 @@ function build(sectionId, titre, contexte, missions, competences, productions) {
 
     html += `</ul></div>`;
     if (productions != null)
-        html += `<a class="p-2 text-center text-white duration-500 ease-in-out transform rounded-xl shadow-aroundColored bg-darkgray font-cleanBold w-max hover:scale-95" target="_blank" href="${productions}">Productions</a></div></div>`;
+        html += `<a class="p-2 text-center text-white duration-500 ease-in-out transform rounded-xl shadow-around bg-darkgray font-cleanBold w-max hover:scale-95" target="_blank" href="${productions}">Productions</a></div></div>`;
     else
         html += `<div class="p-2 text-center text-white duration-500 rounded-xl shadow-around bg-gray-300 font-cleanBold w-max cursor-not-allowed">Productions</div></div></div>`;
 

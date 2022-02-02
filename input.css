@@ -24,6 +24,18 @@
     }
 }
 
+@layer components {
+    .card {
+        @apply bg-gray-100 rounded-[28px] p-5 lg:p-10;
+    }
+    .dark_card {
+        @apply bg-darkgray rounded-[28px];
+    }
+    .nav_section {
+        @apply duration-500 ease-in-out cursor-pointer hover:-translate-y-2;
+    }
+}
+
 img {
     -webkit-user-drag: none;
     -khtml-user-drag: none;
