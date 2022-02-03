@@ -11,23 +11,23 @@
     <link rel="icon" href="./public/img/portfolio.png">
 </head>
 
-<body class="flex flex-col overflow-x-hidden overflow-y-visible select-none font-cleanLight gap-y-10 text-darkgray">
+<body class="flex flex-col overflow-x-hidden overflow-y-visible select-none font-cleanLight gap-y-10 text-darkgray body">
     <!-- Homepage -->
 
-    <section id="homepage" class="grid w-screen h-screen gap-5 p-5 lg:p-0 place-content-around lg:gap-0">
+    <div id="homepage" class="grid w-screen h-screen gap-5 p-5 lg:p-0 place-content-around lg:gap-0">
 
         <div class="grid w-full h-full grid-flow-col gap-5 auto-cols-auto">
 
             <div class="grid w-full grid-rows-2 gap-5">
                 <div class="flex flex-col justify-center w-full h-full font-cleanRegular card">
                     <span class="text-xl lg:text-5xl font-cleanExtraBold">Bonjour ! Je m’appelle Alexandre.</span>
-                    <span class="mt-5 text-sm leading-5 text-darkgray text-opacity-40">Je suis étudiant en informatique et développeur full-stack.</span>
-                    <span class="text-sm text-darkgray text-opacity-40">J'aime créer des choses simples et intuitives.</span>
+                    <span class="mt-5 text-xl leading-5 text-darkgray text-opacity-40">Je suis étudiant en informatique et développeur full-stack.</span>
+                    <span class="text-xl text-darkgray text-opacity-40">J'aime créer des choses simples et intuitives.</span>
                 </div>
 
                 <div class="w-full lg:hidden">
                     <div class="flex items-center justify-center w-full h-max dark_card">
-                        <img class="w-48" src="./public/img/bitmoji.png" alt="">
+                        <img class="w-48 h-auto" src="./public/img/bitmoji.png" alt="">
                     </div>
                 </div>
 
@@ -89,14 +89,14 @@
             </div>
         </div>
 
-    </section>
+    </div>
 
     <!-- Qui suis-je ? -->
-    <section id="experiences" class="h-screen px-5 py-5 md:py-10 md:px-20">
+    <div id="experiences" class="h-screen px-5 py-5 md:py-10 md:px-20">
         <div class="flex flex-col items-center justify-center h-screen md:flex-row gap-x-20 gap-y-10">
-            <div class="flex flex-col rounded-[45px] bg-darkgray place-items-center order-last md:order-first">
+            <div class="flex flex-col order-last dark_card place-items-center md:order-first">
                 <img class="w-56" src="./public/img/pc.png" alt="">
-                <div class="flex flex-col justify-center px-16 text-2xl py-7 m-7 gap-y-7 bg-lightgray rounded-customXl font-cleanBold">
+                <div class="flex flex-col justify-center px-16 text-2xl py-7 m-7 gap-y-7 card font-cleanBold">
                     <a href="https://fr.linkedin.com/in/alexandre-boutinaud-264302196" class="flex h-full gap-x-5 w-max">
                         <img class="w-10" src="./public/img/linkedin.svg" alt="">
                         <span>Linkedin</span>
@@ -107,26 +107,26 @@
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col order-first gap-y-10 md:order-last">
-                <span class="text-2xl md:text-5xl font-cleanRegular">Un étudiant passionné par les&#160<span class="underline decoration-red-600">nouvelles technologies</span>, qui est prêt à mettre ses compétences à disposition pour de formidables&#160
-                <span class="underline decoration-red-600">projets</span>&#160!</span>
-                <span class="text-lg italic md:text-2xl font-cleanRegular">“Selon moi, un bon développeur est quelqu’un qui a le sens du détail de la perfection et qui aime se mettre au service du produit, de son équipe et des utilisateurs.”</span>
+            <div class="flex flex-col order-first gap-y-10 md:order-last font-cleanRegular">
+                <span class="text-2xl md:text-5xl">Un étudiant passionné par les&#160;<span class="underline decoration-red-600">nouvelles technologies</span>, qui est prêt à mettre ses compétences à disposition pour de formidables&#160;
+                <span class="underline decoration-red-600">projets</span>&#160;!</span>
+                <span class="text-lg italic md:text-2xl">“Selon moi, un bon développeur est quelqu’un qui a le sens du détail de la perfection et qui aime se mettre au service du produit, de son équipe et des utilisateurs.”</span>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Compétences -->
-    <section id="skills" class="h-full px-5 py-5 lg:h-screen md:py-10 lg:px-20">
+    <div id="skills" class="h-full px-5 py-5 lg:h-screen md:py-10 lg:px-20">
         <div class="grid h-full gap-y-20 place-items-center">
 
-            <div class="text-3xl text-center duration-500 md:text-6xl font-cleanBold">
+            <h1 class="text-3xl text-center duration-500 md:text-6xl font-cleanBold">
                 <span>Des compétences à votre service.</span>
-            </div>
+            </h1>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 xl:gap-x-20 gap-y-10 md:pb-0">
-                <div class="opacity-0 skillCard h-96 sm:h-full lg:h-full w-80 bg-lightgray rounded-customXl" id="chartdiv"></div>
+                <div class="p-0 opacity-0 skillCard h-96 sm:h-full lg:h-full w-80 card" id="chartdiv"></div>
 
-                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-customXl">
+                <div class="flex flex-col h-full p-0 opacity-0 w-80 skillCard card">
                     <div class="flex flex-col items-center justify-center h-32 p-5 gap-y-2 rounded-t-3xl">
                         <svg class="w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -154,7 +154,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-customXl">
+                <div class="flex flex-col h-full p-0 opacity-0 w-80 skillCard card">
                     <div class="flex flex-col items-center justify-center h-32 p-5 gap-y-2 rounded-t-3xl">
                         <svg class="w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
@@ -182,7 +182,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col h-full opacity-0 w-80 skillCard bg-lightgray rounded-customXl">
+                <div class="flex flex-col h-full p-0 opacity-0 w-80 skillCard card">
                     <div class="flex flex-col items-center justify-center h-32 p-5 gap-y-2 rounded-t-3xl">
                         <svg class="w-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
@@ -203,14 +203,14 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Formations -->
-    <section id="training" class="grid h-full px-5 py-5 place-items-center md:py-10 lg:px-20 gap-y-20">
+    <div id="training" class="grid h-full px-5 py-5 place-items-center md:py-10 lg:px-20 gap-y-20">
 
-        <div class="text-3xl text-center duration-500 md:text-6xl font-cleanBold">
+        <h1 class="text-3xl text-center duration-500 md:text-6xl font-cleanBold">
             <span>Mes formations.</span>
-        </div>
+        </h1>
 
         <div class="grid h-full gap-10 lg:grid-cols-3 place-items-center">
 
@@ -238,7 +238,7 @@
                         <span class="text-white text-opacity-40">Okmont</span>
                         <span class="text-white text-opacity-40">Melesse</span>
                     </div>
-                    <a href="./public/stages.html" class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-cleanBold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out" href="">
+                    <a href="./public/stages.html" class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-cleanBold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out">
                         <span>Continuer</span>
                     </a>
                 </div>
@@ -252,16 +252,16 @@
                         <span class="text-white text-opacity-40">OpenClassRooms</span>
                         <span class="text-white text-opacity-40">Pix</span>
                     </div>
-                    <a href="./public/formations.html" class="bg-[#14FF00]/80 shadow-[0_15px_45px_5px_rgba(20,255,0,0.25)] flex items-center justify-center rounded-xl font-cleanBold text-xl py-2 px-14 hover:scale-95 duration-500 ease-in-out" href="">
+                    <div class="flex items-center justify-center py-2 text-xl duration-500 ease-in-out bg-gray-500 cursor-not-allowed rounded-xl font-cleanBold px-14 hover:scale-95">
                         <span>Continuer</span>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Contacts -->
-    <!-- <section id="contacts" class="h-full px-5 py-5 md:px-0 md:py-0">
+    <!-- <div id="contacts" class="h-full px-5 py-5 md:px-0 md:py-0">
         <div class="grid h-full md:grid-cols-2 place-items-center">
             <div class="flex flex-col items-center justify-center">
                 <div class="text-3xl text-center duration-500 md:text-6xl font-cleanBold">
@@ -293,18 +293,16 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+    <script src="./public/scripts/main.js"></script>
 </body>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-
-
-<script src="./public/scripts/main.js"></script>
-
-<script src="https://ryandejaegher.com/js/marquee.js" defer></script>
 
 </html>
