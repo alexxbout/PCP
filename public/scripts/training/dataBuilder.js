@@ -195,7 +195,7 @@ export function buildData() {
 function build(sectionId, titre, contexte, missions, competences, productions) {
     let parent = document.querySelector(`#${sectionId} .dataSection`);
 
-    let html = `<div class="w-full h-full bg-white cursor-pointer shadow-around rounded-customLg data">
+    let html = `<div class="w-full h-full card cursor-pointer p-2 data">
     
                     <div class="flex items-center justify-between header relative">
 

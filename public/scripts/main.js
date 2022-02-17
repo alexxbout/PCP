@@ -9,43 +9,12 @@ function init() {
     loadCharts();
     hackAmCharts();
     loadAnimations();
-
-    let training_scroll = document.getElementById("training_scroll");
-
-    training_scroll.classList.toggle("scroll-smooth");
-    training_scroll.classList.toggle("snap-x");
-
-    training_scroll.scrollLeft = 9999;
-
-    // Position nav bar to middle of the screen
-    let scrollWidth = training_scroll.scrollWidth;
-    let navSize = training_scroll.scrollWidth - training_scroll.scrollLeft;
-    let middle = (scrollWidth - navSize) / 2;
-    let temp = scrollWidth - middle;
-    let toScroll = temp - navSize;
-
-    training_scroll.scrollLeft = toScroll;
-
-    training_scroll.classList.toggle("scroll-smooth");
-    training_scroll.classList.toggle("snap-x");
-
-    let right_scroll = document.getElementById("right_scroll");
-    let left_scroll = document.getElementById("left_scroll");
-
-    right_scroll.addEventListener("click", () => {
-        training_scroll.scrollLeft = training_scroll.scrollWidth;
-    });
-
-    left_scroll.addEventListener("click", () => {
-        training_scroll.scrollLeft = 0;
-    });
 }
 
 /**
  * Load animations
  */
 function loadAnimations() {
-    const threshold = 500;
     let scrolled = false;
     let elementTarget = document.getElementById("skills");
 
@@ -66,7 +35,7 @@ function loadAnimations() {
     });
 
     window.addEventListener("scroll", function() {
-        if (window.scrollY > (elementTarget.offsetTop - threshold) && !scrolled) {
+        if (checkVisible(elementTarget) && !scrolled) {
             scrolled = true;
             skillCardsAnime.play();
             chart.appear();
@@ -165,4 +134,10 @@ function loadCharts() {
 
         series2.columns.template.fill = am4core.color("#000000");
     });
+}
+
+function checkVisible(elm) {
+    var rect = elm.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 }
